@@ -11,7 +11,7 @@ def count(s,c):
     i=0
     for val in s:    
         if val == c:        
-            continue
+            continue # 不执行后面的 i+=1
         i+=1
     return i
 

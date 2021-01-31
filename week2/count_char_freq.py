@@ -12,9 +12,11 @@ char_freq=dict()
 
 for char in long_str:
     if char not in  char_freq: #first occurrence
-        #write your code here #
+        # write your code here #
+        pass
     else:  # already exists
-        #write your code here #
+        # write your code here #
+        pass
 print("Iterate keys")
 for char in char_freq:
     print(char)

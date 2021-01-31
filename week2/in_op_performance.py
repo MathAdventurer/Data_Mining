@@ -33,3 +33,25 @@ for exp in exp_list:
     print("\t result =", eval(exp))
     print("\t speed =", timeit.timeit(exp, number=100,
                   setup="from __main__ import black_list, black_set"))
+
+
+
+
+
+
+class hello():
+    def __init__(self,num):
+        print("hello",num)
+
+a = hello(5)
+
+class hello1(hello):
+     def __init__(self.num,a1,a2):
+         super.__init__(num)
+         print("hello", a1)
+         print("hello",a2)
+
+b = hello1(2,2)
+
+
+
