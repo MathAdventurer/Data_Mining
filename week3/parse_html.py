@@ -30,7 +30,7 @@ for row in table.find_all('tr'):
     columns = row.find_all('td')
     for column in columns:
         if row_marker == 2 and column_marker ==2:
-        desire = column.get_text()
+            desire = column.get_text()
         print("We are now proceesing row=",row_marker,"and column=",column_marker,' with value=',column.get_text())
         column_marker += 1 #process next column of current row
     row_marker+=1 #process next row
