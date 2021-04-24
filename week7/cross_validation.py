@@ -35,7 +35,7 @@ print("="*30)
 print("="*5,'KFold CV',"="*5)
 print("="*30)     
 
-kf = KFold(n_splits=4)
+kf = KFold(n_splits=4)   #每次训练12个样本,留下4个样本
 i=0
 for train_index, test_index in kf.split(X, y):
      X_train, X_test = X[train_index], X[test_index]
@@ -50,7 +50,7 @@ for train_index, test_index in kf.split(X, y):
 #################
 
 print("="*30)
-print("="*5,'Stratified random shuffle split CV',"="*5)
+print("="*5,'Stratified random shuffle split CV',"="*5) # 保证正负的样本比例，随机shuffle
 print("="*30)
 
 for i in range(4):  
@@ -66,10 +66,10 @@ for i in range(4):
 #################    
      
 print("="*30)
-print("="*5,'StratifiedKFold CV',"="*5)
+print("="*5,'StratifiedKFold CV',"="*5)  # 先排序, 每次对正负样本进行取相同的比例,没有shuffle
 print("="*30)
 
-skf = StratifiedKFold(n_splits=4)
+skf = StratifiedKFold(n_splits=4)   #StratifiedKFold 分类器类,有split 方法
 i=0
 for train_index, test_index in skf.split(X, y):
      X_train, X_test = X[train_index], X[test_index]

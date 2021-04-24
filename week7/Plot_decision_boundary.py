@@ -96,9 +96,21 @@ for W, label in zip((W1,W2,W3), ('W1','W2','W3')):
 plt.legend()    
 plt.show()
 
+
+
+# #class zip(object)
+#  |  zip(*iterables) --> zip object
+#  |
+#  |  Return a zip object whose .__next__() method returns a tuple where
+#  |  the i-th element comes from the i-th iterable argument.  The .__next__()
+#  |  method continues until the shortest iterable in the argument sequence
+#  |  is exhausted and then it raises StopIteration.
+
+# 对应相同维度的数据
+# zip.__next__() 相当于 next(), iteration结束后都会报错
 #Compute zero_one_loss
 print("\nZero one loss:")
-for W, label in zip((W1,W2,W3), ('W1','W2','W3')):
+for W, label in zip((W1,W2,W3), ('W1','W2','W3')):  # 对应赋值, zip 函数
     zero_one_loss_total = 0
     for i in range(len(X)):
         x_i = X[i]

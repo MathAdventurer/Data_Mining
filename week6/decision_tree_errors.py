@@ -45,7 +45,7 @@ tree = DecisionTreeClassifier()
 #and fit the data.
 tree.fit(X, Y)
 Y_pred = tree.predict(X)
-X_err = X[Y != Y_pred]
+X_err = X[Y != Y_pred] # zero-one loss
 print("There are {} errors/mismatches".format(sum(Y != Y_pred)))
 
 # Plot the decision boundary. For that, we will assign a color to each
